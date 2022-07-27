@@ -1,14 +1,14 @@
-# single-spa demo - Root Config
+# Single-spa Demo - Root Config
 
 ## Overview
 
 This repo is used in conjunction with four other repos listed below. Together they make up an application composed of microfrontends. Each app can be updated and deployed independently from the others.
 
-- **Root Config** (This Repo) ()
-- **Angular App** ()
-- **React App** ()
-- **Vue App** ()
-- **Svelte App** ()
+- [**Root Config** (This Repo)](https://github.com/actionanand/single-spa-demo-root-config)
+- [**Angular App**]()
+- [**React App**]()
+- [**Vue App**]()
+- [**Svelte App**]()
 
 ## Demo
 

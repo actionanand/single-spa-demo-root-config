@@ -1,0 +1,57 @@
+<single-spa-router base="/">
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/" onclick="singleSpaNavigate(event)">Home</a>
+      </li>
+      <li>
+        <a href="/angular" onclick="singleSpaNavigate(event)">Angular</a>
+      </li>
+      <li>
+        <a href="/vue" onclick="singleSpaNavigate(event)">Vue</a>
+      </li>
+      <li>
+        <a href="/react" onclick="singleSpaNavigate(event)">React</a>
+      </li>
+      <li>
+        <a href="/svelte" onclick="singleSpaNavigate(event)">Svelte</a>
+      </li>
+    </ul>
+  </nav>
+
+<div id="content"></div>
+
+  <!-- <route path="/">
+    <application name="@actionanand/single-spa-nav"></application>
+  </route> -->
+
+  <route path="/" exact>
+    <application name="@actionanand/single-spa-react"></application>
+  </route>
+
+  <route path="angular">
+    <application name="single-spa-angular"></application>
+  </route>
+
+  <route path="vue">
+    <application name="@actionanand/single-spa-vue"></application>
+  </route>
+
+  <route path="svelte">
+    <application name="@actionanand/single-spa-svelte"></application>
+  </route>
+
+  <redirect from="react" to="/"></redirect>
+
+  <!-- <application name="nav" error="navError"></application> -->
+
+  <!-- <h1 name="nav" error="navError"></h1> -->
+
+  <route default>
+    <h1>404 Not Found</h1>
+  </route>
+
+  <footer>my footer</footer>
+
+</single-spa-router>

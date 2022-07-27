@@ -6,9 +6,9 @@ This repo is used in conjunction with four other repos listed below. Together th
 
 - [**Root Config** (This Repo)](https://github.com/actionanand/single-spa-demo-root-config)
 - [**Angular App**](https://github.com/actionanand/single-spa-angular)
-- [**React App**]()
-- [**Vue App**]()
-- [**Svelte App**]()
+- [**React App**](https://github.com/actionanand/single-spa-react)
+- [**Vue App**](https://github.com/actionanand/single-spa-vue)
+- [**Svelte App**](https://github.com/actionanand/single-spa-svelte)
 
 ## Demo
 

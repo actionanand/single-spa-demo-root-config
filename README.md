@@ -20,6 +20,12 @@ You can find the demo here:
 yarn start
 ```
 
+## How to create single-spa frontend app
+
+```bash
+npx create-single-spa
+```
+
 ## How It Works
 
 This project uses [single-spa](https://single-spa.js.org/) to architect an app composed of `micro-frontends`. In the root config, the four microfrontend apps (angular, react, vue, and svelte) are registered with singe-spa. The main `index.ejs` file contains an import map, which references where to find the compiled JavaScript bundle for each microfrontend. [SystemJS](https://github.com/systemjs/systemjs) is the module loader which then loads the bundles when needed.

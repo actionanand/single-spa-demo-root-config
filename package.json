@@ -2,7 +2,8 @@
   "name": "@actionanand/root-config",
   "homepage": "http://actionanand.github.io/single-spa-demo-root-config",
   "scripts": {
-    "start": "webpack serve --port 2022 --env isLocal",
+    "start": "node server.js",
+    "start:dev": "webpack serve --port 2022 --env isLocal",
     "lint": "eslint src --ext js",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
@@ -42,6 +43,7 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
+    "express": "^4.18.1",
     "single-spa": "^5.9.3",
     "single-spa-layout": "^2.1.0"
   }

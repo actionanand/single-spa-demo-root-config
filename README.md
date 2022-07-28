@@ -12,7 +12,7 @@ This repo is used in conjunction with four other repos listed below. Together th
 
 ## Demo
 
-You can find the demo here: 
+You can find the demo here: [Single-Spa-Demo App](https://ar-single-spa-demo.herokuapp.com/)
 
 ## How to run this repo locally
 

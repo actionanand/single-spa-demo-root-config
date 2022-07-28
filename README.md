@@ -17,13 +17,19 @@ You can find the demo here:
 ## How to run this repo locally
 
 ```bash
-yarn start
+yarn start:dev
 ```
 
 ## How to build for production
 
 ```bash
 yarn build:webpack
+```
+
+## How to trigger express server
+
+```bash
+yarn start
 ```
 
 ## How to create single-spa frontend app

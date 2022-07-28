@@ -1,5 +1,6 @@
 {
   "name": "@actionanand/root-config",
+  "homepage": "http://actionanand.github.io/single-spa-demo-root-config",
   "scripts": {
     "start": "webpack serve --port 2022 --env isLocal",
     "lint": "eslint src --ext js",
@@ -8,7 +9,9 @@
     "check-format": "prettier --check .",
     "prepare": "husky install",
     "build": "concurrently yarn:build:*",
-    "build:webpack": "webpack --mode=production"
+    "build:webpack": "webpack --mode=production",
+    "predeploy": "yarn run build:webpack",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -22,6 +25,7 @@
     "eslint-config-important-stuff": "^1.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.2",
     "jest": "^27.0.6",

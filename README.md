@@ -20,10 +20,22 @@ You can find the demo here:
 yarn start
 ```
 
+## How to build for production
+
+```bash
+yarn build:webpack
+```
+
 ## How to create single-spa frontend app
 
 ```bash
 npx create-single-spa
+```
+
+## How to serve raw github content as CDN
+
+```
+https://cdn.jsdelivr.net/gh/<github-username>/<github-repo-name@branch-name>/<filename>
 ```
 
 ## How It Works
@@ -40,3 +52,6 @@ Each repo can be set up with [Travis CI](https://travis-ci.org/) for running job
 - [How to Develop and Deploy Micro-Frontends with Single-SPA](https://www.freecodecamp.org/news/developing-and-deploying-micro-frontends-with-single-spa/)
 - [Fun with Micro-frontend in a single-spa way](https://dev.to/nitinreddy3/fun-with-micro-frontend-in-a-single-spa-way-1iok)
 - [Connect Micro frontends with the Single-Spa framework. Step by step guide.](https://obaranovskyi.medium.com/connecting-micro-frontends-with-the-single-spa-framework-step-by-step-guide-e7fa87306bc7)
+- [RawGit](https://rawgit.com/)
+- [Raw Github js file not loading (direct link) like CDN - stackoverflow](https://stackoverflow.com/questions/62901066/raw-github-js-file-not-loading-direct-link-like-cdn/)
+- [How to deploy a React, Angular and Vue project to Github pages](https://deepinder.me/how-to-deploy-a-react-angular-vue-project-to-github-pages)

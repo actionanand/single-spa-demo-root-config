@@ -21,6 +21,7 @@ module.exports = (webpackConfigEnv, argv) => {
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
+          appTitle: 'Single Spa Demo',
         },
       }),
     ],

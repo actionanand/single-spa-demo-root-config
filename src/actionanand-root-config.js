@@ -10,7 +10,7 @@ addErrorHandler(err => {
   if (getAppStatus(err.appOrParcelName) === LOAD_ERROR) {
       System.delete(System.resolve(err.appOrParcelName));
   }
-  let el = document.getElementById("content");
+  let el = document.getElementById("single-spa-load-error");
   errorMsg = "<h1>We're sorry!</h1>" + "<h4>Your request could not be completed at this time. Please try again later.</h4>";
   el.innerHTML = errorMsg;
   // document.body.appendChild(el);
@@ -19,7 +19,7 @@ addErrorHandler(err => {
 
 
 window.addEventListener('single-spa:before-app-change', evt => {
-  let el = document.getElementById("content");
+  let el = document.getElementById("single-spa-load-error");
   errorMsg = ''
   el.innerHTML = errorMsg;
 });

@@ -1,6 +1,6 @@
 <single-spa-router base="/">
 
-  <nav>
+  <!-- <nav>
     <ul>
       <li>
         <a href="/" onclick="singleSpaNavigate(event)">Home</a>
@@ -18,13 +18,13 @@
         <a href="/svelte" onclick="singleSpaNavigate(event)">Svelte</a>
       </li>
     </ul>
+  </nav> -->
+
+  <nav>
+    <application name="@actionanand/single-spa-nav"></application>
   </nav>
 
-<div id="content"></div>
-
-  <!-- <route path="/">
-    <application name="@actionanand/single-spa-nav"></application>
-  </route> -->
+  <div id="single-spa-load-error"></div>
 
   <route path="/" exact>
     <application name="@actionanand/single-spa-react"></application>
@@ -45,8 +45,6 @@
   <redirect from="react" to="/"></redirect>
 
   <!-- <application name="nav" error="navError"></application> -->
-
-  <!-- <h1 name="nav" error="navError"></h1> -->
 
   <route default>
     <h1>404 Not Found</h1>

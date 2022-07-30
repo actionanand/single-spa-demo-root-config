@@ -64,7 +64,9 @@
         "single-spa-angular": "http://localhost:20222/main.js",
         "@actionanand/single-spa-react": "http://localhost:20223/actionanand-single-spa-react.js",
         "@actionanand/single-spa-vue":	"http://localhost:20224/js/app.js",
-        "@actionanand/single-spa-svelte":	"http://localhost:20225/actionanand-single-spa-svelte.js"
+        "@actionanand/single-spa-svelte":	"http://localhost:20225/actionanand-single-spa-svelte.js",
+        "@actionanand/single-spa-footer":	"http://localhost:20226/actionanand-single-spa-footer.js",
+        "@actionanand/single-spa-404": "http://localhost:20227/actionanand-single-spa-404.js"
       }
     }
   </script>
@@ -84,6 +86,12 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
+
+  <style>
+    body, html { margin: 0; padding: 0; font-size: 16px; font-family: Arial, Helvetica, sans-serif; height: 100%; }
+    body { display: flex; flex-direction: column; }
+    * { box-sizing: border-box; }
+  </style>
 </head>
 <body>
   <noscript>

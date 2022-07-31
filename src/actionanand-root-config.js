@@ -6,6 +6,13 @@ import layout from './microfrontends-layout.html';
 
 let errorMsg = '';
 
+const htmlLayoutData = {
+  props: {
+    customProp1: "coming from 'root-config'",
+    customProp2: "I'm second custom prop"
+  }
+}
+
 addErrorHandler(err => {
   if (getAppStatus(err.appOrParcelName) === LOAD_ERROR) {
       System.delete(System.resolve(err.appOrParcelName));
@@ -26,7 +33,7 @@ window.addEventListener('single-spa:before-app-change', evt => {
 
 
 // Parse our microfrontend layout
-const routes = constructRoutes(layout);
+const routes = constructRoutes(layout, htmlLayoutData);
 
 // Create single-spa application objects for each microfrontend
 const applications = constructApplications({

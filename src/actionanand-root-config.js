@@ -21,7 +21,7 @@ addErrorHandler(err => {
       System.delete(System.resolve(err.appOrParcelName));
   }
   let el = document.getElementById("single-spa-load-error");
-  errorMsg = "<h1>We're sorry!</h1>" + "<h4>Your request could not be completed at this time. Please try again later.</h4>";
+  errorMsg = `<div class="spa-err-msg"><div>We're sorry!</div><div>Your request could not be completed at this time. Please try again later.</div></div>`;
   el.innerHTML = errorMsg;
   // document.body.appendChild(el);
   console.log('Error loading app. ', err);

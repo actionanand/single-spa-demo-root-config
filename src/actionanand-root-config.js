@@ -12,7 +12,7 @@ const htmlLayoutData = {
     customProp2: "I'm second custom prop"
   },
   loaders: {
-    spaLoader: `<span class="loader">Load&nbsp;ng</span>`,
+    spaLoader: `<div class="loader-wrap"><span class="loader">Load&nbsp;ng</span></div>`,
   }
 }
 

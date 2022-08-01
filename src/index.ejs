@@ -66,7 +66,8 @@
         "@actionanand/single-spa-vue":	"http://localhost:20224/js/app.js",
         "@actionanand/single-spa-svelte":	"http://localhost:20225/actionanand-single-spa-svelte.js",
         "@actionanand/single-spa-footer":	"http://localhost:20226/actionanand-single-spa-footer.js",
-        "@actionanand/single-spa-404": "http://localhost:20227/actionanand-single-spa-404.js"
+        "@actionanand/single-spa-404": "http://localhost:20227/actionanand-single-spa-404.js",
+        "@actionanand/single-spa-vanilla-js": "http://localhost:20228/index.js"
       }
     }
   </script>
@@ -127,13 +128,13 @@
       margin-top: 10px;
     }
 
-    .loader-wrap {
+    .spa-loader-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 74vh;
     }
-    .loader {
+    .spa-loader {
       color: green;
       position: relative;
       display: inline-block;
@@ -144,7 +145,7 @@
       letter-spacing: 4px;
       box-sizing: border-box;
     }
-    .loader::before {
+    .spa-loader::before {
       content: '';  
       position: absolute;
       right: 70px;
@@ -155,7 +156,7 @@
       box-sizing: border-box;
       animation: animloader1 1s linear infinite alternate;
     }
-    .loader::after {
+    .spa-loader::after {
       content: '';  
       width: 10px;
       height: 10px;

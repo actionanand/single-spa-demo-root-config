@@ -10,6 +10,9 @@ const htmlLayoutData = {
   props: {
     customProp1: "coming from 'root-config'",
     customProp2: "I'm second custom prop"
+  },
+  loaders: {
+    spaLoader: `<span class="loader">Load&nbsp;ng</span>`,
   }
 }
 

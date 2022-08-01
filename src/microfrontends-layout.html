@@ -27,19 +27,19 @@
   <div id="single-spa-load-error"></div>
 
   <route path="/" exact>
-    <application name="@actionanand/single-spa-react" props="customProp1, customProp2"></application>
+    <application name="@actionanand/single-spa-react" loader="spaLoader" props="customProp1, customProp2"></application>
   </route>
 
   <route path="angular">
-    <application name="single-spa-angular"></application>
+    <application name="single-spa-angular" loader="spaLoader"></application>
   </route>
 
   <route path="vue">
-    <application name="@actionanand/single-spa-vue"></application>
+    <application name="@actionanand/single-spa-vue" loader="spaLoader"></application>
   </route>
 
   <route path="svelte">
-    <application name="@actionanand/single-spa-svelte"></application>
+    <application name="@actionanand/single-spa-svelte" loader="spaLoader"></application>
   </route>
 
   <redirect from="react" to="/"></redirect>
@@ -47,7 +47,7 @@
   <!-- <application name="nav" error="navError"></application> -->
 
   <route default>
-    <application name="@actionanand/single-spa-404"></application>
+    <application name="@actionanand/single-spa-404" loader="spaLoader"></application>
   </route>
   
   <footer>

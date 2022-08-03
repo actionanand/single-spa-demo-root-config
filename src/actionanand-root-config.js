@@ -1,4 +1,4 @@
-import { registerApplication, start, addErrorHandler, getAppStatus, LOAD_ERROR } from 'single-spa';
+import { registerApplication, start, addErrorHandler, getAppStatus, LOAD_ERROR, navigateToUrl } from 'single-spa';
 import { constructApplications, constructRoutes, constructLayoutEngine } from 'single-spa-layout';
 import layout from './microfrontends-layout.html';
 

@@ -34,6 +34,11 @@ window.addEventListener('single-spa:before-app-change', evt => {
   el.innerHTML = errorMsg;
 });
 
+window.addEventListener('vanilla', evnt => {
+  console.log(evnt);
+  navigateToUrl('svelte');
+});
+
 
 // Parse our microfrontend layout
 const routes = constructRoutes(layout, htmlLayoutData);

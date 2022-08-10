@@ -2,12 +2,15 @@ import { registerApplication, start, addErrorHandler, getAppStatus, LOAD_ERROR, 
 import { constructApplications, constructRoutes, constructLayoutEngine } from 'single-spa-layout';
 import layout from './microfrontends-layout.html';
 
+import { getData, state$ } from '@actionanand/utility';
+
 // import * as isActive from "./activity-functions";
 
 let errorMsg = '';
 
 const htmlLayoutData = {
   props: {
+    angTitle: "Todo",
     customProp1: "coming from 'root-config'",
     customProp2: "I'm second custom prop"
   },
@@ -35,8 +38,21 @@ window.addEventListener('single-spa:before-app-change', evt => {
 });
 
 window.addEventListener('vanilla', evnt => {
+  const fields = ["detail"];
+  const data = evnt[fields[0]];
+  // console.log(data);
   console.log(evnt);
+  state$.next({data});
   navigateToUrl('svelte');
+});
+
+window.addEventListener('svelte', evnt => {
+  const fields = ["detail"];
+  const data = evnt[fields[0]];
+  // console.log(data);
+  console.log(evnt);
+  state$.next({data});
+  navigateToUrl('vanilla');
 });
 
 

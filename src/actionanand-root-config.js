@@ -55,6 +55,15 @@ window.addEventListener('svelte', evnt => {
   navigateToUrl('vanilla');
 });
 
+window.addEventListener('react', evnt => {
+  const fields = ["detail"];
+  const data = evnt[fields[0]];
+  // console.log(data);
+  console.log(evnt);
+  state$.next({data});
+  navigateToUrl('angular');
+});
+
 
 // Parse our microfrontend layout
 const routes = constructRoutes(layout, htmlLayoutData);

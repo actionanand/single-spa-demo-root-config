@@ -11,8 +11,8 @@ let errorMsg = '';
 const htmlLayoutData = {
   props: {
     angTitle: "Todo",
-    customProp1: "coming from 'root-config'",
-    customProp2: "I'm second custom prop"
+    reactTitle: "Notes",
+    customProp1: "coming from 'root-config'"
   },
   loaders: {
     spaLoader: `<div class="spa-loader-wrap"><span class="spa-loader">Load&nbsp;ng</span></div>`,

@@ -27,6 +27,7 @@ addErrorHandler(err => {
   let el = document.getElementById("single-spa-load-error");
   errorMsg = `<div class="spa-err-msg"><div>We're sorry!</div><div>Your request could not be completed at this time. Please try again later.</div></div>`;
   el.innerHTML = errorMsg;
+  document.title = 'Single-Spa - Error Loading';
   // document.body.appendChild(el);
   console.log('Error loading app. ', err);
 });

@@ -12,6 +12,7 @@ const htmlLayoutData = {
   props: {
     angTitle: "Todo",
     reactTitle: "Notes",
+    vueTitle: "Infinity",
     customProp1: "coming from 'root-config'"
   },
   loaders: {

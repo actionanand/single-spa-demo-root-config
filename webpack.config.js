@@ -22,7 +22,7 @@ module.exports = (webpackConfigEnv, argv) => {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
           appTitle: "Single Spa Demo",
-          favicon: "./src/assets/favicon.ico",
+          favicon: "src/assets/favicon.ico",
         },
       }),
     ],

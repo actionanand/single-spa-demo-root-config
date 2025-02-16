@@ -52,7 +52,7 @@ https://cdn.jsdelivr.net/gh/<github-username>/<github-repo-name@branch-name>/<fi
 ## How to build prod build for heroku
 
 ```bash
-$ npx heroku login -i 
+$ npx heroku login -i
 $ npx heroku create ar-single-spa-demo
 $ git push heroku main
 ```
@@ -63,7 +63,6 @@ $ git push heroku main
 ## How It Works
 
 This project uses [single-spa](https://single-spa.js.org/) to architect an app composed of `micro-frontends`. In the root config, the eight other microfrontend apps (such as angular, react, vue, and svelte) are registered with singe-spa. The main `index.ejs` file contains an import map, which references where to find the compiled JavaScript bundle for each microfrontend. [SystemJS](https://github.com/systemjs/systemjs) is the module loader which then loads the bundles when needed. Utility app serves shared data between other apps.
-
 
 ### NB
 

@@ -1,0 +1,27 @@
+# .prettierrc or .prettierrc.yaml
+# prettier.config.js or .prettierrc.js
+# resource: https://prettier.io/docs/en/configuration.html
+trailingComma: 'all'
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+bracketSpacing: true
+bracketSameLine: true
+arrowParens: 'avoid'
+printWidth: 120
+overrides:
+  - files:
+      - '*.js'
+      - '*.jsx'
+    options:
+      bracketSpacing: true
+      jsxSingleQuote: true
+      semi: true
+      singleQuote: true
+      tabWidth: 2
+      useTabs: false
+  - files:
+      - '*.ts'
+    options:
+      tabWidth: 2

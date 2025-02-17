@@ -26,5 +26,8 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+    devServer: {
+      static: 'src/assets',
+    },
   });
 };

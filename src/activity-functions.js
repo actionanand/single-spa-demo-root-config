@@ -1,7 +1,5 @@
 export function prefix(location, ...prefixes) {
-  return prefixes.some(
-    prefix => location.href.indexOf(`${location.origin}/${prefix}`) !== -1
-  );
+  return prefixes.some(prefix => location.href.indexOf(`${location.origin}/${prefix}`) !== -1);
 }
 
 export function nav() {
@@ -10,13 +8,13 @@ export function nav() {
 }
 
 export function angular(location) {
-  return prefix(location, "angular");
+  return prefix(location, 'angular');
 }
 
 export function react(location) {
-  return prefix(location, "react");
+  return prefix(location, 'react');
 }
 
 export function vue(location) {
-  return prefix(location, "vue");
+  return prefix(location, 'vue');
 }

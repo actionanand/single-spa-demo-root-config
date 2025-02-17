@@ -10,21 +10,21 @@ let errorMsg = '';
 
 const htmlLayoutData = {
   props: {
-    angTitle: "Todo",
-    reactTitle: "Notes",
-    vueTitle: "Infinity",
-    customProp1: "coming from 'root-config'"
+    angTitle: 'Todo',
+    reactTitle: 'Notes',
+    vueTitle: 'Infinity',
+    customProp1: "coming from 'root-config'",
   },
   loaders: {
     spaLoader: `<div class="spa-loader-wrap"><span class="spa-loader">Load&nbsp;ng</span></div>`,
-  }
-}
+  },
+};
 
 addErrorHandler(err => {
   if (getAppStatus(err.appOrParcelName) === LOAD_ERROR) {
-      System.delete(System.resolve(err.appOrParcelName));
+    System.delete(System.resolve(err.appOrParcelName));
   }
-  let el = document.getElementById("single-spa-load-error");
+  let el = document.getElementById('single-spa-load-error');
   errorMsg = `<div class="spa-err-msg"><div>We're sorry!</div><div>Your request could not be completed at this time. Please try again later.</div></div>`;
   el.innerHTML = errorMsg;
   document.title = 'Single-Spa - Error Loading';
@@ -32,40 +32,38 @@ addErrorHandler(err => {
   console.log('Error loading app. ', err);
 });
 
-
 window.addEventListener('single-spa:before-app-change', evt => {
-  let el = document.getElementById("single-spa-load-error");
-  errorMsg = ''
+  let el = document.getElementById('single-spa-load-error');
+  errorMsg = '';
   el.innerHTML = errorMsg;
 });
 
 window.addEventListener('vanilla', evnt => {
-  const fields = ["detail"];
+  const fields = ['detail'];
   const data = evnt[fields[0]];
   // console.log(data);
   console.log(evnt);
-  state$.next({data});
+  state$.next({ data });
   navigateToUrl('svelte');
 });
 
 window.addEventListener('svelte', evnt => {
-  const fields = ["detail"];
+  const fields = ['detail'];
   const data = evnt[fields[0]];
   // console.log(data);
   console.log(evnt);
-  state$.next({data});
+  state$.next({ data });
   navigateToUrl('vanilla');
 });
 
 window.addEventListener('react', evnt => {
-  const fields = ["detail"];
+  const fields = ['detail'];
   const data = evnt[fields[0]];
   // console.log(data);
   console.log(evnt);
-  state$.next({data});
+  state$.next({ data });
   navigateToUrl('angular');
 });
-
 
 // Parse our microfrontend layout
 const routes = constructRoutes(layout, htmlLayoutData);
@@ -75,7 +73,7 @@ const applications = constructApplications({
   routes,
   loadApp({ name }) {
     return System.import(name);
-  }
+  },
 });
 
 // Create a layout engine, which controls where in the DOM the microfrontends are placed
@@ -86,9 +84,6 @@ applications.forEach(registerApplication);
 
 // Start up single-spa
 start();
-
-
-
 
 // // routes without layout engine
 
@@ -119,7 +114,6 @@ start();
 // start({
 //   urlRerouteOnly: true
 // });
-
 
 // // some other way
 

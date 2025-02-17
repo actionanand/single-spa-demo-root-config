@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@actionanand/root-config": "http://localhost:2022/actionanand-root-config.js",
+    "@actionanand/root-config": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-demo-root-config@gh-pages/actionanand-root-config.js",
     "@actionanand/utility": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-utility@gh-pages/actionanand-utility.js",
     "single-spa-angular": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-angular@gh-pages/main.js",
     "@actionanand/single-spa-react": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-react@gh-pages/actionanand-single-spa-react.js",

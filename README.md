@@ -2,6 +2,7 @@
 
 ## Overview
 
+This is **polyglot** single-spa root cinfig app.
 This repo is used in conjunction with nine other repos listed below. Together they make up an application composed of microfrontends. Each app can be updated and deployed independently from the others.
 
 - [**Root Config** (This Repo)](https://github.com/actionanand/single-spa-demo-root-config)
@@ -14,6 +15,8 @@ This repo is used in conjunction with nine other repos listed below. Together th
 - [**404 App**](https://github.com/actionanand/single-spa-404)
 - [**Vanilla JS App**](https://github.com/actionanand/single-spa-vanilla-js)
 - [**Utility App**](https://github.com/actionanand/single-spa-utility)
+- [**Angular Parcel App**](https://github.com/actionanand/angular-parcel-app)
+- [**React Parcel App**](https://github.com/actionanand/react-parcel-app)
 
 ## Demo
 
@@ -70,6 +73,8 @@ Each repo can be set up with [Travis CI](https://travis-ci.org/) for running job
 
 ### Sources
 
+- [Single-spa Examples - config App](https://single-spa.js.org/docs/examples/#community-examples)
+- [Should I have a parent/root config app and children apps? - Root Config from a single framework](https://single-spa.js.org/docs/faq/#should-i-have-a-parentroot-app-and-children-apps)
 - [How to Develop and Deploy Micro-Frontends with Single-SPA](https://www.freecodecamp.org/news/developing-and-deploying-micro-frontends-with-single-spa/)
 - [Fun with Micro-frontend in a single-spa way](https://dev.to/nitinreddy3/fun-with-micro-frontend-in-a-single-spa-way-1iok)
 - [Connect Micro frontends with the Single-Spa framework. Step by step guide.](https://obaranovskyi.medium.com/connecting-micro-frontends-with-the-single-spa-framework-step-by-step-guide-e7fa87306bc7)

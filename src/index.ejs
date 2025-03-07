@@ -37,10 +37,29 @@
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
 
-  <% if (!isLocal) { %>
+  <!-- <% if (!isLocal) { %>
   <script type="systemjs-importmap" 
     src="https://raw.githubusercontent.com/actionanand/json-server/main/db/json/single-spa-demo-root-config/importmap.json"
   ></script>
+  <% } %> -->
+
+  <% if (!isLocal) { %>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@actionanand/root-config": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-demo-root-config@gh-pages/actionanand-root-config.js",
+          "@actionanand/utility": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-utility@gh-pages/actionanand-utility.js",
+          "single-spa-angular": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-angular@gh-pages/main.js",
+          "@actionanand/single-spa-react": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-react@gh-pages/actionanand-single-spa-react.js",
+          "@actionanand/single-spa-vue": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-vue@gh-pages/js/app.27022a70.js",
+          "@actionanand/single-spa-svelte": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-svelte@gh-pages/actionanand-single-spa-svelte.js",
+          "@actionanand/single-spa-vanilla-js": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-vanilla-js@gh-pages/index.js",
+          "@actionanand/single-spa-404": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-404@gh-pages/actionanand-single-spa-404.js",
+          "@actionanand/single-spa-nav": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-nav@gh-pages/actionanand-single-spa-nav.js",
+          "@actionanand/single-spa-footer": "https://cdn.jsdelivr.net/gh/actionanand/single-spa-footer@gh-pages/actionanand-single-spa-footer.js"
+        }
+      }
+    </script>
   <% } %>
 
   <script type="systemjs-importmap">

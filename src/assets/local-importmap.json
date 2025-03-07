@@ -9,8 +9,6 @@
     "@actionanand/single-spa-vanilla-js": "http://localhost:20228/index.js",
     "@actionanand/single-spa-404": "http://localhost:20227/actionanand-single-spa-404.js",
     "@actionanand/single-spa-nav": "http://localhost:20221/actionanand-single-spa-nav.js",
-    "@actionanand/single-spa-footer":	"http://localhost:20226/actionanand-single-spa-footer.js",
-    "@actionanand/react-parcel-app": "http://localhost:20241/actionanand-react-parcel-app.js",
-    "angular-parcel-app": "http://localhost:20242/main.js"
+    "@actionanand/single-spa-footer":	"http://localhost:20226/actionanand-single-spa-footer.js"
   }
 }

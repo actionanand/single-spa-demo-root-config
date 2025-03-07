@@ -13,7 +13,8 @@
     "build:webpack": "webpack --mode=production",
     "predeploy": "yarn run build:webpack",
     "deploy": "gh-pages -d dist",
-    "copy-error-page": "cp dist/index.html dist/404.html"
+    "copy-error-page": "cp dist/index.html dist/404.html",
+    "deploy:surge": "surge --project ./dist --domain ar-single-spa.surge.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -35,6 +36,7 @@
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "serve": "^12.0.0",
+    "surge": "^0.24.6",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-config-single-spa": "^5.0.0",

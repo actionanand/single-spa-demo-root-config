@@ -12,7 +12,8 @@
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
     "predeploy": "yarn run build:webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "copy-error-page": "cp dist/index.html dist/404.html"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

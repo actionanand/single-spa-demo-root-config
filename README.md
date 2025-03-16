@@ -3,7 +3,7 @@
 ## Overview
 
 This is **polyglot** single-spa root cinfig app.
-This repo is used in conjunction with nine other repos listed below. Together they make up an application composed of microfrontends. Each app can be updated and deployed independently from the others.
+This repo is used in conjunction with eleven other repos listed below. Together they make up an application composed of microfrontends. Each app can be updated and deployed independently from the others.
 
 - [**Root Config** (This Repo)](https://github.com/actionanand/single-spa-demo-root-config)
 - [**Angular App**](https://github.com/actionanand/single-spa-angular)
@@ -18,9 +18,17 @@ This repo is used in conjunction with nine other repos listed below. Together th
 - [**Angular Parcel App**](https://github.com/actionanand/angular-parcel-app)
 - [**React Parcel App**](https://github.com/actionanand/react-parcel-app)
 
-## Demo
+### Live site preview
 
-You can find the demo here: [Single-Spa-Demo App](https://ar-single-spa-demo.herokuapp.com/)
+1. https://ar-single-spa.surge.sh
+2. https://ar-single-spa.onrender.com
+3. https://actionanand.github.io/single-spa-angular-root-config
+
+### How to deploy in surge
+
+```sh
+yarn run deploy:surge
+```
 
 ## How to run this repo locally
 

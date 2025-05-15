@@ -48,6 +48,23 @@ yarn build:webpack
 yarn start
 ```
 
+## Creating surge token
+
+1. install surge globally
+
+```sh
+npm install surge -g
+```
+
+2. Generating Surge token
+
+```sh
+surge token
+```
+For the first time, you installed surge, it takes your email and password to create/login account through terminal.
+
+3. Save this token in a `SECRET` with name `SURGE_TOKEN`. For this goto Repo Settings > Secrets > New_secret. Enter Token Name `SURGE_TOKEN` and paste the token generated in it.
+
 ## How to create single-spa frontend app
 
 ```bash

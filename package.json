@@ -11,10 +11,11 @@
     "prepare": "husky install",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
-    "predeploy": "yarn run build:webpack",
+    "predeploy": "yarn run build:webpack && yarn run copy-error-page",
     "deploy": "gh-pages -d dist",
     "copy-error-page": "cp dist/index.html dist/404.html",
-    "deploy:surge": "surge --project ./dist --domain ar-single-spa.surge.sh"
+    "deploy:surge": "surge --project ./dist --domain ar-single-spa.surge.sh",
+    "redeploy:surge": "rm -rf dist && yarn build:webpack && yarn run copy-error-page && yarn deploy:surge"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

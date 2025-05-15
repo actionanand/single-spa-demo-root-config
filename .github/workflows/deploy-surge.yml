@@ -1,0 +1,37 @@
+name: Rebuild and Deploy to Surge
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.1'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Remove dist folder
+        run: rm -rf dist
+
+      - name: Build project
+        run: yarn build:webpack
+
+      - name: Copy error page
+        run: yarn copy-error-page
+
+      - name: Deploy to Surge
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: npx surge --project ./dist --domain ar-single-spa.surge.sh --token $SURGE_TOKEN
